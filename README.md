@@ -82,3 +82,5 @@ git commit -m "깃 잡업 관련 설명글작성"
 git commit
 ```
 # GITHub
+
+서울에서 작업완료 함.
