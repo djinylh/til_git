@@ -314,6 +314,12 @@ git push -u origin main
 git push
 ```
 
+```bach
+git branch --unset-upstream
+```
+
+push 디폴트값 없애는 명령어
+
 git push만 적어도 윗 명령어를 자동으로 생성되어 실행된다.
 
 ### 4.3 원격 저장소에 소스 등록하기
@@ -363,8 +369,53 @@ git commit - m " [docs]: 깃 학습"
 git push origin main
 ```
 
-## 5 Github의 소스를 다운로드 받아서 작업하는 법
+## 5 Github의 소스를 복사해서 작업하는 법
 
 - git hub 주소를 주의하자
 - 코드 소스 기준은 `https`로 진행
 - 코드 소스 기준이 `ssh`이면 인증을 다시 처리해야함
+
+### 5.1 실습
+
+- 서울로 출장을 갔다 ( pc없이)
+- 서울 사무소에 pc를 지급 받았다.
+- pc에 환경설정 진행 (vscode, git)
+- D:/student/`test`폴더 생성
+- github 사이트에 프로젝트를 'clone'한다.
+- github 사이트에 repository를 'clone'한다.
+
+### 5.2 clone
+
+```bash
+gif clone 깃허브 주소 .
+```
+
+### 5.3 clone 이후의 작업
+
+```bash
+git status
+git branch -v
+git branch 새 이름
+git switch 새 이름
+작업 진행
+git add .
+git commit -m "[]작업내용"
+git push origin  브랜치 이름
+```
+
+대구에 내려와서 ...
+git branch -v
+목록을 먼저 본 후
+git fetch --all
+다시
+
+// 내 로컬 브랜치 목록
+git branch -v
+// 내 깃허브 리모트 브랜치 목록
+git branch -r
+// 로컬 및 깃허브 모든 브랜치 목록
+git branch -a
+
+git switch origin/seoul
+
+git switch --track -c daegu origin/seoul
