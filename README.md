@@ -117,6 +117,7 @@ git commit -m "깃 작업 관련 설명글작성"
 ```bash
 git commit
 ```
+<<<<<<< HEAD
 
 ### 4.5. 커밋 내용 컨벤션 알아보기
 
@@ -419,3 +420,8 @@ git branch -a
 git switch origin/seoul
 
 git switch --track -c daegu origin/seoul
+=======
+# GITHub
+
+서울에서 작업완료 함.
+>>>>>>> daegu
