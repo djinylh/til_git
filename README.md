@@ -81,4 +81,64 @@ git commit -m "깃 잡업 관련 설명글작성"
 ```
 git commit
 ```
+
+
+
+
+```bash
+git status
+```
+
+```bash
+git branch -v
+```
+
+```bash
+git branch 새 이름
+```
+
+```bash
+git switch 새 이름
+```
+
+작업 진행
+```bash
+git add .
+```
+
+```bash
+git commit -m "[]작업내용"
+```
+
+```bash
+git push origin  브랜치 이름
+```
+
+### 5.4 git push 이후 작업
+
+-jeju 폴더는 clone을 하여 진행 함.
+-`til.git` 폴더는 clone을 할 필요가 있을까요?
+- `til.git`은 이미 git 세팅이 되어 있기 때문에 clone은 필요 없다.
+
+
+### 5.5 기존 프로젝트에서 github 브랜치 적용하기
+- 기존 프로젝트에서는 clone 하지 않음
+- 기존 프로젝트에서는 fetch 사용
+- 1. fetch는 깃허브 에서 모든 브랜치를 가져옴
+
+```bash
+git fetch --all
+```
+
+- 2. 브랜치 목록 전체 보기 (깃허브, 로컬)
+```bash
+git branch -a
+```
+- 3. `새롭게 작업한 깃허브 브랜치`를 `로컬 브랜치로 생성` 만들어서 작업`하기
+
+```bach
+ git switch --track -c jeju remotes/origin/seoul
+```
+
+
 # GITHub
