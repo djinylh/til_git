@@ -425,10 +425,7 @@ git switch origin/seoul
 
 # GITHub
 
-서울에서 작업완료 함.
-=======
-
-
+# 서울에서 작업완료 함.
 
 ```bash
 git status
@@ -447,6 +444,7 @@ git switch 새 이름
 ```
 
 작업 진행
+
 ```bash
 git add .
 ```
@@ -461,12 +459,12 @@ git push origin  브랜치 이름
 
 ### 5.4 git push 이후 작업
 
--jeju 폴더는 clone을 하여 진행 함.
--`til.git` 폴더는 clone을 할 필요가 있을까요?
+-jeju 폴더는 clone을 하여 진행 함. -`til.git` 폴더는 clone을 할 필요가 있을까요?
+
 - `til.git`은 이미 git 세팅이 되어 있기 때문에 clone은 필요 없다.
 
-
 ### 5.5 기존 프로젝트에서 github 브랜치 적용하기
+
 - 기존 프로젝트에서는 clone 하지 않음
 - 기존 프로젝트에서는 fetch 사용
 - 1. fetch는 깃허브 에서 모든 브랜치를 가져옴
@@ -476,15 +474,42 @@ git fetch --all
 ```
 
 - 2. 브랜치 목록 전체 보기 (깃허브, 로컬)
+
 ```bash
 git branch -a
 ```
+
 - 3. `새롭게 작업한 깃허브 브랜치`를 `로컬 브랜치로 생성` 만들어서 작업`하기
 
 ```bach
  git switch --track -c jeju remotes/origin/seoul
 ```
 
+## 6. 깃허브 브랜치 삭제하기
 
-# GITHub
->>>>>>> jeju
+- 깃 허브 브랜치 모두 내려 받기
+
+```bash
+git fetch --all
+```
+
+- 로컬 및 깃허브 브랜치 목록 모두 보기
+
+```bash
+git branch -a
+```
+
+- 깃허브의 브랜치 삭제하기
+
+```bash
+git push 저장소이름 --delete 브랜치이름
+```
+
+- 예) git push origin --delete remotes/origin/jeju
+
+git push origin --delete origin/jeju
+
+## 7 . 가능하시면 브랜치는 삭제하지 않기를 권장합니다.
+
+## 8 . 가능하시면 commit의 내용은 삭제, 수정하지 않기를 권장합니다.
+
